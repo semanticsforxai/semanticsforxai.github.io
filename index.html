@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Explainable AI</title>
   <meta charset="utf-8">
@@ -8,213 +9,294 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    /* Remove the navbar's default margin-bottom and rounded borders */
     /* .navbar {
       margin-bottom: 0;
       border-radius: 0;
     } */
-    
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: auto}
-    
+    .row.content {
+      height: auto
+    }
+
+    .affln {
+      color:lightblue
+    }
+
     /* Set gray background color and 100% height */
     /* .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
       height: 100%;
     } */
-    
+
     /* Set black background color, white text and some padding */
     /* footer {
       background-color: #555;
       color: white;
       padding: 5px;
     } */
-    
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
         padding: 15px;
       }
-      .row.content {height:auto;} 
+      .row.content {
+        height: auto;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- <nav class="navbar navbar-inverse"> </nav> -->
-  
-<div class="container text-center">
+  <!-- <nav class="navbar navbar-inverse"> </nav> -->
+
+  <div class="container text-center">
     <table border="0" align="center">
       <tr>
-        <td width="700" align="center" valign="middle"><h3>US2TS 2019 Tutorial on</h3>
-         <span class="title"><h4>On the Role of Data Semantics for Explainable AI</h4> </span>
-         <!-- <span class="title"><h5> From Theory to Motivation, Applications and Limitations</h5> </span>
+        <td width="700" align="center" valign="middle">
+          <h3>US2TS 2019 Tutorial on</h3>
+          <span class="title"><h4>On the Role of Data Semantics for Explainable AI</h4> </span>
+          <!-- <span class="title"><h5> From Theory to Motivation, Applications and Limitations</h5> </span>
          <span class="title"><h5>Sunday, January 27, 2019</h5> </span>
          <span class="title"><h5>8:30 AM – 12:30 AM</h5> </span> -->
         </td>
       </tr>
     </table>
     <p><img class="img-rounded" src="assets/images/main.jpg" width="700" height="500" align="center" /></p>
-     
-</div>
 
-
-<div class="container-fluid text-center">
-  
-  <div class="row content">
-    <div class="col-md-1 sidenav"></div>
-    <div class="col-md-10 text-left">
-      <h2 align="center">Goal of the Tutorial</h2>
-      <p>The goal of the tutorial is to provide answers to the following questions:</p>
-      <div class="list-group">
-        <a href="#" class="list-group-item">
-          <h5 class="list-group-item-heading">What is explainable AI (XAI)</h5>
-          <p class="list-group-item-text"> What is XAI from a Machine Learning community perspective? For what reasons has XAI emerged as an important research topic in the machine learning community? </p>
-        </a>
-
-        <a href="#" class="list-group-item">
-            <h5 class="list-group-item-heading">How does it work?</h5>
-            <p class="list-group-item-text"> What might a dichotomy of explainable AI methods look like?  What are the broad 'types' of mechanisms that enable XAI? </p>
-        </a>
-
-        <a href="#" class="list-group-item">
-              <h5 class="list-group-item-heading">What are the limitations?</h5>
-              <p class="list-group-item-text">What current limitations exist in the field? In what way is the present are narrowly examining XAI, and what contributions have the data semantics community provided thus far? </p>
-        </a>
-
-        <a href="#" class="list-group-item">
-            <h5 class="list-group-item-heading">What about semantics extension?</h5>
-            <p class="list-group-item-text">In what ways have the data semantics community contributed to XAI thus far? Where do the tutorial presenters see how the semantics community can contribute to the field of XAI? What ideas do the participants of the tutorial session have, and can the outline of a community research agenda be devised?</p>
-        </a>
-
-      </div>
-    </div>
-    <div class="col-md-1 sidenav" ></div>
   </div>
 
-  <div class="row content">
+
+  <div class="container-fluid text-center">
+
+    <div class="row content">
       <div class="col-md-1 sidenav"></div>
       <div class="col-md-10 text-left">
-          <h2 align="center">Overview</h2>
-          <p>Artificial intelligence is shaping the way of our life by giving us automated decisions. We are using these automated decisions in every sphere of our life, from pattern recognition, autonomous driving, drug discovery etc. </p>
-
-          <p> Recent AI algorithms, and in particular deep learning methods, are improving the accuracy of such automated decision, but have limitations for exposing explanations when they fail. Even worse, many methods are unable to identify if or when they will fail, making it difficult for practitioners to know when to "trust" the decisions an AI reaches. This notion of trust is especially important in contexts where a decision has impact on the well being of an individual's health or career, or has economic and societal ramifications. </p>
-           
-           <p> This tutorial aims at exposing existing solutions towards XAI, their limitations and the potential benefits of incorporating data semantics research and technologies to address them. The tutorial will offer an overview of the present methods for XAI, their limitations, the few contributions the data semantics community have made thus far, why data semantics is likely to be crucial role for XAI, and directions that our community can potentially follow in this emerging and exciting research area.</p>
-    
-       </div>
-      <div class="col-md-1 sidenav"></div>
-  </div>
-
- 
-
-  <!-- <div class="row">
-      
-      <div class="col-md-1 sidenav"></div>
-      <div class="col-md-2"> 
-          <a href="assets/images/luca.jpg" target="_blank">
-            <img class="img-responsive img-circle" src="assets/images/luca.jpg" alt="Luca" >
-            <div class="caption">
-              <p>Luca Costabello</p>
-            </div>
+        <h2 align="center">Goal of the Tutorial</h2>
+        <p>The goal of the tutorial is to provide answers to the following questions:</p>
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <h5 class="list-group-item-heading">What is explainable AI (XAI)</h5>
+            <p class="list-group-item-text"> What is XAI from a Machine Learning community perspective? For what reasons
+              has XAI emerged as an important research topic in the machine learning community? </p>
           </a>
+
+          <a href="#" class="list-group-item">
+            <h5 class="list-group-item-heading">How does it work?</h5>
+            <p class="list-group-item-text"> What might a dichotomy of explainable AI methods look like? What are the broad
+              'types' of mechanisms that enable XAI? </p>
+          </a>
+
+          <a href="#" class="list-group-item">
+            <h5 class="list-group-item-heading">What are the limitations?</h5>
+            <p class="list-group-item-text">What current limitations exist in the field? In what way is the present are narrowly
+              examining XAI, and what contributions have the data semantics community provided thus far? </p>
+          </a>
+
+          <a href="#" class="list-group-item">
+            <h5 class="list-group-item-heading">What about semantics extension?</h5>
+            <p class="list-group-item-text">In what ways have the data semantics community contributed to XAI thus far? Where
+              do the tutorial presenters see how the semantics community can contribute to the field of XAI? What ideas do
+              the participants of the tutorial session have, and can the outline of a community research agenda be devised?</p>
+          </a>
+
+        </div>
       </div>
       <div class="col-md-1 sidenav"></div>
-  </div> -->
-
-  <div class="row content">
-    <div class="col-md-1 sidenav">
-      <!--  -->
     </div>
-    <div class="col-md-10 text-left"> 
+
+    <div class="row content">
+      <div class="col-md-1 sidenav"></div>
+      <div class="col-md-10 text-left">
+        <h2 align="center">Overview</h2>
+        <p>Artificial intelligence is shaping the way of our life by giving us automated decisions. We are using these automated
+          decisions in every sphere of our life, from pattern recognition, autonomous driving, drug discovery etc. </p>
+
+        <p> Recent AI algorithms, and in particular deep learning methods, are improving the accuracy of such automated decision,
+          but have limitations for exposing explanations when they fail. Even worse, many methods are unable to identify
+          if or when they will fail, making it difficult for practitioners to know when to "trust" the decisions an AI reaches.
+          This notion of trust is especially important in contexts where a decision has impact on the well being of an individual's
+          health or career, or has economic and societal ramifications. </p>
+
+        <p> This tutorial aims at exposing existing solutions towards XAI, their limitations and the potential benefits of
+          incorporating data semantics research and technologies to address them. The tutorial will offer an overview of
+          the present methods for XAI, their limitations, the few contributions the data semantics community have made thus
+          far, why data semantics is likely to be crucial role for XAI, and directions that our community can potentially
+          follow in this emerging and exciting research area.</p>
+
+      </div>
+      <div class="col-md-1 sidenav"></div>
+    </div>
+
+    <div class="row content">
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
+      <div class="col-md-10 text-left">
         <h2 align="center">Presenters</h2>
-  
-      <div class="presenter">
-        <div class="col-md-4 sidenav">
+
+        <div class="presenter">
+          <div class="col-md-3 sidenav-center">
             <img src="assets/images/pascal.jpg" class="img-circle" alt="Pascal Hitzler" width="200" height="200">
-        </div>
-        <div class="col-md-8 text-left">
-            <h4>Pascal Hitzler</h4>
-            <p><a href="http://www.pascal-hitzler.de">Pascal Hitzler</a> is endowed NCR Distinguished Professor, Brage Golding Distinguished Professor of Research, and Director of Data Science at the Department of Computer Science and Engineering at Wright State University in Dayton, Ohio, U.S.A. His research record lists over 400 publications in such diverse areas as semantic web, artificial intelligence, neural-symbolic integration, knowledge representation and reasoning, machine learning, denotational semantics, and set-theoretic topology. His research is highly cited. He is founding Editor-in-chief of the Semantic Web journal, the leading journal in the field, and of the IOS Press book series Studies on the Semantic Web. He is co-author of the W3C Recommendation OWL 2 Primer, and of the book Foundations of Semantic Web Technologies by CRC Press, 2010, which was named as one out of seven Outstanding Academic Titles 2010 in Information and Computer Science by the American Library Association's Choice Magazine, and has translations into German and Chinese. He is on the editorial board of several journals and book series and a founding steering committee member of the Neural-Symbolic Learning and Reasoning Association and the Association for Ontology Design and Patterns, and he frequently acts as conference chair in various functions, including e.g. General Chair (ESWC2019, US2TS2018), Program Chair (FOIS 2018, AIMSA2014), Track Chair (ISWC2018, ESWC2018, ISWC2017, ISWC2016, AAAI-15), Workshop Chair (K-Cap2013), Sponsor Chair (ISWC2013, RR2009, ESWC2009), PhD Symposium Chair (ESWC 2017). He gave tutorials at ESWC 2017, ISWC 2016, IJCAI-16, AAAI-15, ISWC 2013, STIDS 2013, OWLED 2011, ESWC 2009, IJCAI 2009, Informatik 2009, KI 2009, GeoS 2009, ISWC 2006, ESWC 2006, ICANN 2006 and KI 2005. For more information about him, see <a href="http://www.pascal-hitzler.de"> http://www.pascal-hitzler.de</a> </p>
-        </div> 
-      </div>  
-      
-      <div class="presenter">
-          <div class="col-md-4 sidenav">
-              <img src="assets/images/derek.jpg" class="img-circle" alt="Derek DOran" width="200" height="200">
           </div>
-          <div class="col-md-8 text-left">
-              <h4>Derek Doran</h4>
-       <p> <a href="http://derk--.github.io">Derek Doran</a>  is an Associate Professor of Computer Science and Engineering at Wright State University. His research interests are in developing statistical, deep learning and topological data analysis methods for the study of complex web and cyber-systems. He is especially interested in enabling deep learning and topological data models to be inherently explainable and comprehensible to users. His research is supported by NSF, AFRL, ORISE, and the Ohio Federal Research Network. Derek is author of over 75 publications, most of which are in AI and ML venues (including Journal of Stat Software; Expert Systems with Apps; Social Network Analysis and Mining; WSDM; ASONAM; ICWSM; WebInt; NeSy; Workshops at NIPS; IJCAI; ESWC) and has three patents. He is on the editorial board for Social Network Analysis and Mining and the International Journal of Web Engineering and Technologies and is a founding chair of the Neural-Symbolic Learning and Reasoning special interest group on Explainable AI. More information at: <a href="http://derk--.github.io">http://derk--.github.io</a>.
-        </p>
-      </div>
- 
-      <div class="presenter">
-        <div class="col-md-4 sidenav-center">
+          <div class="col-md-9 text-left">
+            <h4 class="name">Pascal Hitzler</h4>
+            <h4 class="affln"> Wright State University</h4>
+            <p><a href="http://www.pascal-hitzler.de">Pascal Hitzler</a> is endowed NCR Distinguished Professor, Brage Golding
+              Distinguished Professor of Research, and Director of Data Science at the Department of Computer Science and
+              Engineering at Wright State University in Dayton, Ohio, U.S.A. His research record lists over 400 publications
+              in such diverse areas as semantic web, artificial intelligence, neural-symbolic integration, knowledge representation
+              and reasoning, machine learning, denotational semantics, and set-theoretic topology. His research is highly
+              cited. He is founding Editor-in-chief of the Semantic Web journal, the leading journal in the field, and of
+              the IOS Press book series Studies on the Semantic Web. He is co-author of the W3C Recommendation OWL 2 Primer,
+              and of the book Foundations of Semantic Web Technologies by CRC Press, 2010, which was named as one out of
+              seven Outstanding Academic Titles 2010 in Information and Computer Science by the American Library Association's
+              Choice Magazine, and has translations into German and Chinese. He is on the editorial board of several journals
+              and book series and a founding steering committee member of the Neural-Symbolic Learning and Reasoning Association
+              and the Association for Ontology Design and Patterns, and he frequently acts as conference chair in various
+              functions, including e.g. General Chair (ESWC2019, US2TS2018), Program Chair (FOIS 2018, AIMSA2014), Track
+              Chair (ISWC2018, ESWC2018, ISWC2017, ISWC2016, AAAI-15), Workshop Chair (K-Cap2013), Sponsor Chair (ISWC2013,
+              RR2009, ESWC2009), PhD Symposium Chair (ESWC 2017). He gave tutorials at ESWC 2017, ISWC 2016, IJCAI-16, AAAI-15,
+              ISWC 2013, STIDS 2013, OWLED 2011, ESWC 2009, IJCAI 2009, Informatik 2009, KI 2009, GeoS 2009, ISWC 2006, ESWC
+              2006, ICANN 2006 and KI 2005. For more information about him, see <a href="http://www.pascal-hitzler.de"> http://www.pascal-hitzler.de</a>
+              </p>
+          </div>
+        </div>
+
+        <div class="presenter">
+          <div class="col-md-3 sidenav-center">
+            <img src="assets/images/derek.jpg" class="img-circle" alt="Derek DOran" width="200" height="200">
+          </div>
+          <div class="col-md-9 text-left">
+            <h4 class="name">Derek Doran</h4>
+            <h4 class="affln"> Wright State University</h4>
+            <p> <a href="http://derk--.github.io">Derek Doran</a> is an Associate Professor of Computer Science and Engineering
+              at Wright State University. His research interests are in developing statistical, deep learning and topological
+              data analysis methods for the study of complex web and cyber-systems. He is especially interested in enabling
+              deep learning and topological data models to be inherently explainable and comprehensible to users. His research
+              is supported by NSF, AFRL, ORISE, and the Ohio Federal Research Network. Derek is author of over 75 publications,
+              most of which are in AI and ML venues (including Journal of Stat Software; Expert Systems with Apps; Social
+              Network Analysis and Mining; WSDM; ASONAM; ICWSM; WebInt; NeSy; Workshops at NIPS; IJCAI; ESWC) and has three
+              patents. He is on the editorial board for Social Network Analysis and Mining and the International Journal
+              of Web Engineering and Technologies and is a founding chair of the Neural-Symbolic Learning and Reasoning special
+              interest group on Explainable AI. More information at: <a href="http://derk--.github.io">http://derk--.github.io</a>.</p>
+          </div>
+        </div>
+
+        <div class="presenter">
+          <div class="col-md-3 sidenav-center">
             <img src="assets/images/freddy.jpg" class="img-circle" alt="Freddy Lecue" width="200" height="200">
+          </div>
+          <div class="col-md-9 text-left">
+            <h4 class="name">Freddy Lecue</h4>
+            <h4 class="affln">Inria</h4>
+            <p><a href="http://www-sop.inria.fr/members/Freddy.Lecue/">Freddy Lecue</a> (PhD 2008, Habilitation 2015) is
+              a principal scientist and research manager in Artificial Intelligent systems, systems combining learning and
+              reasoning capabilities, in Accenture Technology Labs, Dublin - Ireland. He is also a research associate at
+              INRIA, in WIMMICS, Sophia Antipolis - France. Before joining Accenture Labs, he was a Research Scientist at
+              IBM Research, Smarter Cities Technology Center (SCTC) in Dublin, Ireland, and lead investigator of the Knowledge
+              Representation and Reasoning group. His main research interests are Explainable AI systems. The application
+              domain of his current research is Smarter Cities, with a focus on Smart Transportation and Building. In particular,
+              he is interested in exploiting and advancing Knowledge Representation and Reasoning methods for representing
+              and inferring actionable insight from large, noisy, heterogeneous and big data. He has over 40 publications
+              in refereed journals and conferences related to Artificial Intelligence (AAAI, ECAI, IJCAI, IUI) and Semantic
+              Web (ESWC, ISWC), all describing new system to handle expressive semantic representation and reasoning. He
+              co-organized the first three workshops on semantic cities (AAAI 2012, 2014, 2015, IJCAI 2013), and the first
+              two tutorial on smart cities at AAAI 2015 and IJCAI 2016. Prior to joining IBM, Freddy Lecue was a Research
+              Fellow (2008-2011) with the Centre for Service Research at The University of Manchester, UK. He has been awarded
+              by a second prize for his Ph.D thesis by the French Association for the Advancement of Artificial Intelligence
+              in 2009, and has been recipient of the Best Research Paper Award at the ACM/IEEE Web Intelligence conference
+              in 2008.</p>
+          </div>
         </div>
-        <div class="col-md-8 text-left">
-          <h4>Freddy Lecue</h4>
-          <p><a href="http://www-sop.inria.fr/members/Freddy.Lecue/">Freddy Lecue</a> (PhD 2008, Habilitation 2015) is a principal scientist and research manager in Artificial Intelligent systems, systems combining learning and reasoning capabilities, in Accenture Technology Labs, Dublin - Ireland. He is also a research associate at INRIA, in WIMMICS, Sophia Antipolis - France. Before joining Accenture Labs, he was a Research Scientist at IBM Research, Smarter Cities Technology Center (SCTC) in Dublin, Ireland, and lead investigator of the Knowledge Representation and Reasoning group. His main research interests are Explainable AI systems. The application domain of his current research is Smarter Cities, with a focus on Smart Transportation and Building. In particular, he is interested in exploiting and advancing Knowledge Representation and Reasoning methods for representing and inferring actionable insight from large, noisy, heterogeneous and big data. He has over 40 publications in refereed journals and conferences related to Artificial Intelligence (AAAI, ECAI, IJCAI, IUI) and Semantic Web (ESWC, ISWC), all describing new system to handle expressive semantic representation and reasoning. He co-organized the first three workshops on semantic cities (AAAI 2012, 2014, 2015, IJCAI 2013), and the first two tutorial on smart cities at AAAI 2015 and IJCAI 2016. Prior to joining IBM, Freddy Lecue was a Research Fellow (2008-2011) with the Centre for Service Research at The University of Manchester, UK. He has been awarded by a second prize for his Ph.D thesis by the French Association for the Advancement of Artificial Intelligence in 2009, and has been recipient of the Best Research Paper Award at the ACM/IEEE Web Intelligence conference in 2008.</p>
-        </div>
-      </div>
 
-      <div class="presenter">
-          <div class="col-md-4 sidenav-center">
-              <img src="assets/images/sarker.png" class="img-circle" alt="Md Kamruzzaman Sarker" width="200" height="200">
+        <div class="presenter">
+          <div class="col-md-3 sidenav-center">
+            <img src="assets/images/sarker.png" class="img-circle" alt="Md Kamruzzaman Sarker" width="200" height="200">
           </div>
-          <div class="col-md-8 text-left">
-            <h4>Md. Kamruzzaman Sarker</h4>
-            <p><a href="https://dase.cs.wright.edu/people/kamruzzaman-sarker">Md Kamruzzaman Sarker</a>  is a PhD student at Wright State University. His current research focuses on making machine learning algorithms decision more transparent. Besides this he is also interested in making ontology engineering processes easier and more human friendly. For the latter he created both the OWLAx and the ROWL plugin for Protege. He achieved Graduate Certificate in Big and Smart data. Before starting his PhD he worked in industry, at Samsung Electronics, as a software engineer.
-            </p>
+          <div class="col-md-9 text-left">
+            <h4 class="name">Md. Kamruzzaman Sarker</h4>
+            <h4 class="affln"> Wright State University</h4>
+            <p><a href="https://dase.cs.wright.edu/people/kamruzzaman-sarker">Md Kamruzzaman Sarker</a> is a PhD student
+              at Wright State University. His current research focuses on making machine learning algorithms decision more
+              transparent. Besides this he is also interested in making ontology engineering processes easier and more human
+              friendly. For the latter he created both the OWLAx and the ROWL plugin for Protege. He achieved Graduate Certificate
+              in Big and Smart data. Before starting his PhD he worked in industry, at Samsung Electronics, as a software
+              engineer.</p>
           </div>
-      </div>  
+        </div>
+
+      </div>
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
     </div>
 
-    <div class="col-md-10 text-left"> 
+    <div class="row content">
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
+      <div class="col-md-10 text-left">
         <h2 align="center">Co-Organizer</h2>
-  
-      <div class="presenter">
-        <div class="col-md-4 sidenav-center">
+
+        <div class="presenter">
+          <div class="col-md-3 sidenav-center">
             <img src="assets/images/ning.png" class="img-circle" alt="Ning Xie" width="200" height="200">
+          </div>
+          <div class="col-md-9 text-left">
+            <h4 class="name">Ning Xie</h4>
+            <h4 class="affln">Wright State University</h4>
+            <p><a href="http://www.wright.edu/~xie.25/">Ning Xie</a> is a PhD candidate at Wright State University. Her research
+              interests are broadly in machine learning, with a focus on interpretable and reliable Deep Learning. Recently
+              she studies the intrinsic activation space of Deep Neural Network (DNN), towards building a more transparent
+              and robust DNN model. She also explores the model transparency on applications of interaction between computer
+              vision and natural languages during her summer internship at NEC Laboratories America, Inc. Before she joins
+              Wright State University, she was an Algorithm Engineer working on Computer Vision at one of the leading video
+              surveillance company in China. For more information, please feel free to check her homepage at <a href="http://www.wright.edu/~xie.25/">
+                http://www.wright.edu/~xie.25/</a> </p>
+          </div>
         </div>
-        <div class="col-md-8 text-left">
-            <h4>Ning Xie</h4>
-            <p><a href="http://www.wright.edu/~xie.25/">Ning Xie</a> is a PhD candidate at Wright State University. Her research interests are broadly in machine learning, with a focus on interpretable and reliable Deep Learning. Recently she studies the intrinsic activation space of Deep Neural Network (DNN), towards building a more transparent and robust DNN model. She also explores the model transparency on applications of interaction between computer vision and natural languages during her summer internship at NEC Laboratories America, Inc. Before she joins Wright State University, she was an Algorithm Engineer working on Computer Vision at one of the leading video surveillance company in China. For more information, please feel free to check her homepage at <a href="http://www.wright.edu/~xie.25/"> http://www.wright.edu/~xie.25/</a> </p>
-        </div> 
+
       </div>
-    </div> 
-
-    <div class="col-md-1 sidenav">
-      <!--  -->
-    </div>
-  </div>
-
-  <div class="row content">
-    <h2 align="center">Schedule</h2>
-    <span class="title"><h5>March 11-13, 2019</h5> </span>
-    <span class="title"><h5><a href="http://us2ts.org/">http://us2ts.org/</a></h5></span>
-    </div>
-</div>
-
-<!-- <div class="container text-center">
-  
-</div> -->
-
-<footer class="container-fluid text-left">
-    <div class="col-md-1 sidenav">
+      <div class="col-md-1 sidenav">
         <!--  -->
       </div>
-      <div class="col-md-10">
-        
-    <p>Please contact <a href="sarker.3@wright.edu">Md Kamruzzaman Sarker</a> if you have question.</p>
-        </div>
-    <div class="col-md-1 sidenav">
+    </div>
+
+
+
+    <div class="row content">
+      <div class="col-md-1 sidenav">
         <!--  -->
       </div>
-</footer>
+      <div class="col-md-10 text-center">
+        <h2 align="center">Schedule</h2>
+        <span class="title"><h5>March 11-13, 2019</h5> </span>
+        <span class="title"><h5><a href="http://us2ts.org/">http://us2ts.org/</a></h5></span>
+      </div>
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
+    </div>
+
+
+    <footer class="container-fluid text-left">
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
+      <div class="col-md-10 text-left">
+        <p>Please contact <a href="sarker.3@wright.edu">Md Kamruzzaman Sarker</a> if you have question.</p>
+      </div>
+      <div class="col-md-1 sidenav">
+        <!--  -->
+      </div>
+    </footer>
 
 </body>
+
 </html>
